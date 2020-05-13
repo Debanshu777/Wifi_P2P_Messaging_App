@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -183,6 +184,24 @@ public class MainActivity extends AppCompatActivity {
                 serverSocket=new ServerSocket(7777);
                 socket=serverSocket.accept();
             }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public class ClientClass extends Thread{
+        Socket socket;
+        String hostAdd;
+        public ClientClass(InetAddress hostAddress){
+            hostAdd=hostAddress.getHostAddress();
+            socket=new Socket();
+        }
+
+        @Override
+        public void run() {
+            try{
+                socket.connect(new InetSocketAddress(hostAdd,7777),1000);
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
