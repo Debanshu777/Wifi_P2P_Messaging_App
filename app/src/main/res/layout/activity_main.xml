@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#383838"
+    android:paddingTop="40dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:background="#E2E2E2"
+        android:id="@+id/connection_status"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:textColor="#6CEC71"
+        android:layout_margin="20dp"
+        android:text="Connection status"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/connection_status"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:id="@+id/buttons"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="#E2E2E2"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/wifi_on_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WIFI ON" />
+        <Button
+            android:background="#E2E2E2"
+            android:layout_weight="0.5"
+            android:id="@+id/discover_btn"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discover" />
+    </LinearLayout>
+    <ListView
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/buttons"
+        android:id="@+id/list_of_users"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:background="#E2E2E2"
+        android:layout_marginRight="10dp"
+        android:layout_height="300dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="7dp"
+        android:text="Message Received Here"
+        android:id="@+id/message_received"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/list_of_users"
+        android:layout_marginTop="20dp"
+        android:background="#E2E2E2"/>
+    <LinearLayout
+        android:weightSum="1"
+        android:background="#E2E2E2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:layout_weight="0.9"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            />
+    </LinearLayout>
+</RelativeLayout>
