@@ -16,7 +16,9 @@
         android:layout_height="50dp"
         android:textSize="20dp"
         android:textColor="#6CEC71"
-        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
         android:text="Connection status"
         />
 
@@ -56,7 +58,7 @@
         android:layout_marginLeft="10dp"
         android:background="#E2E2E2"
         android:layout_marginRight="10dp"
-        android:layout_height="300dp"/>
+        android:layout_height="200dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
